@@ -1,0 +1,21 @@
+const { Router } = require("express");
+const controllers = require("../controllers");
+const router = Router();
+
+router.get("/", (req, res) => res.send("This is root!"));
+
+router.post("/restaurants/add", controllers.createRestaurant);
+
+router.get("/restaurants/get", controllers.getAllRestaurants);
+
+router.get("/restaurants/:id", controllers.getRestaurantId);
+
+router.get("/reviews", controllers.getAllReviews);
+
+router.post("/reviews", controllers.createReview);
+
+router.delete("/delete-review/:id", controllers.deleteReview);
+
+router.put("/update-restaurants/:id", controllers.updateRestaurant);
+
+module.exports = router;
