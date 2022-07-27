@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="logoHeader">
       <div>
-        <h2>GoBBLE !</h2>
+        <h2 className="gobble">GoBBLE !</h2>
       </div>
     </header>
   );
