@@ -2,20 +2,28 @@ import axios from "axios"; //installed
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
+import { Link } from "react-router-dom";
 
 const Restaurants = () => {
   const [rests, setRests] = useState([]);
-
+  //
   let navigate = useNavigate();
+
+  const navigateToShowRest = () => {
+    navigate("/RestDetails");
+  };
+
+  const showRest = (rest) => {
+    navigate(`{rest.id}`);
+  };
 
   useEffect(() => {
     const getRests = async () => {
-      const res = await axios
-        .get("http://localhost:3001/restaurants")
-        .then((res) => {
-          console.log(res);
-          setRests(res.data.restaurants);
-        });
+      await axios.get("http://localhost:3001/restaurants").then((res) => {
+        console.log(res);
+        setRests(res.data.restaurants);
+        console.log(rests);
+      });
     };
 
     getRests();
@@ -38,6 +46,9 @@ const Restaurants = () => {
               onClick={() => navigate(`Restaurant-Details/${rest._id}`)}
             />
           ))}
+          <button>
+            <Link to="/">Back</Link>
+          </button>
         </div>
       </div>
     );

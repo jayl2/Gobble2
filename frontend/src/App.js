@@ -1,7 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Header from "./components/Header";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
 import Restaurants from "./components/Restaurants";
@@ -11,9 +10,7 @@ import RestDetails from "./components/RestDetails";
 
 function App() {
   let navigate = useNavigate();
-  function navi(to) {
-    navigate(to);
-  }
+
   return (
     <div className="App">
       <nav>
@@ -26,10 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Restaurants" element={<Restaurants />} />
           <Route path="/Reviews" element={<Reviews />} />
-          <Route
-            path="/Restaurant-Details"
-            element={<RestDetails navi={navi} />}
-          />
+          <Route path="/Restaurant-Details/:id" element={<RestDetails />} />
         </Routes>
       </main>
 

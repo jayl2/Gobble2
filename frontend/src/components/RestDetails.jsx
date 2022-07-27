@@ -1,24 +1,38 @@
-const RestDetails = () => {
-  //
-  // const Restaurants = () => {
-  //   const [rests, setRests] = useState([]);
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import DetailsCard from "./DetailsCard";
 
-  //   let navigate = useNavigate();
+const RestDetails = (props) => {
+  const [details, setDetails] = useState([]);
 
-  // useEffect(() => {
-  //   const getRests = async () => {
-  //     const res = await axios
-  //       .get("http://localhost:3001/restaurants/get")
-  //       .then((res) => {
-  //         console.log(res.data.restaurants);
-  //         setRests(res.data.restaurants);
-  //       });
-  //   };
+  let navigate = useNavigate();
+  let { id } = useParams();
 
-  //   getRests();
-  // }, []);
+  const getDetails = async () => {
+    await axios.get(`http://localhost:3001/restaurants/${id}`).then((res) => {
+      console.log(res.data);
+      console.log(res.data.restaurant);
+      const test = res.data.restaurant;
+      console.log(test);
+      setDetails(test);
+    });
+  };
 
-  return <div>This is RestDetails</div>;
+  useEffect(() => {
+    getDetails();
+  }, [id]);
+
+  return (
+    <div>
+      This is RestDetails
+      <div>
+        <DetailsCard name={details.name} image={details.image} />
+      </div>
+    </div>
+  );
 };
 
 export default RestDetails;
