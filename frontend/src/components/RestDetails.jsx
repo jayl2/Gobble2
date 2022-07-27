@@ -22,4 +22,4 @@ const RestDetails = () => {
   return <div></div>;
 };
 
-export default RestDetails;
+export default RestDetails

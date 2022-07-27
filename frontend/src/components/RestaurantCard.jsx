@@ -5,6 +5,7 @@ export default function RestaurantCard(props) {
       <img src={props.image} alt={props.name} />
       <h2>{props.foodType}</h2>
       <h2>{props.city}</h2>
+      <p>{props.desp}</p>
     </div>
   );
 }

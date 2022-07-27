@@ -31,6 +31,7 @@ const Restaurants = () => {
             foodType={rest.foodType}
             city={rest.city}
             image={rest.image}
+            desp={rest.description}
           />
         ))}
       </div>
