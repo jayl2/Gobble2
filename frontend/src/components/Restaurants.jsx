@@ -43,7 +43,7 @@ const Restaurants = () => {
               city={rest.city}
               image={rest.image}
               desp={rest.description}
-              onClick={() => navigate(`Restaurant-Details/${rest._id}`)}
+              onClick={() => navigate(`/Reviews/${rest._id}`)}
             />
           ))}
           <button>
