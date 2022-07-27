@@ -54,7 +54,7 @@ const main = async () => {
       description:
         "Electric Lemon, a seasonal American restaurant, celebrates the farmers, growers and artisans of the Mid-Atlantic, transforming their pristine products into clean, conscious cuisine.",
       image:
-        "https://www.hudsonyardsnewyork.com/sites/default/files/2019-08/Electric%20Lemon%20logo%20KO%20resized%20LARGE.svg",
+        "https://www.hudsonyardsnewyork.com/sites/default/files/styles/property_card/public/2020-08/Chickpea%20Pasta_1000X610.jpg?h=a0c1a9c0&itok=4fbc3q7J",
     },
   ];
 
