@@ -52,14 +52,15 @@
 }
 
 .enterBtn{
-  background-color:yellow;
+  background-color:rgb(86, 187, 187);
   font-family: 'Knewave', cursive;
-  color: rgb(217, 72, 72);
+  color: rgb(237, 247, 248);
   border:solid darkcyan;
-  border-radius: 20%;
+  border-radius: 5%;
   padding:20px;
   font-size: 3rem;
   margin: 40px;
+  width: 20%;
 }
 
 .restName {

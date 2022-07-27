@@ -1,25 +1,24 @@
 const RestDetails = () => {
-  const Restaurants = () => {
-    const [rests, setRests] = useState([]);
+  //
+  // const Restaurants = () => {
+  //   const [rests, setRests] = useState([]);
 
-    let navigate = useNavigate();
+  //   let navigate = useNavigate();
 
-    useEffect(() => {
-      const getRests = async () => {
-        const res = await axios
-          .get("http://localhost:3001/restaurants/get")
-          .then((res) => {
-            console.log(res.data.restaurants);
-            setRests(res.data.restaurants);
-          });
-      };
+  // useEffect(() => {
+  //   const getRests = async () => {
+  //     const res = await axios
+  //       .get("http://localhost:3001/restaurants/get")
+  //       .then((res) => {
+  //         console.log(res.data.restaurants);
+  //         setRests(res.data.restaurants);
+  //       });
+  //   };
 
-      getRests();
-    }, []);
+  //   getRests();
+  // }, []);
 
-
-
-  return <div></div>;
+  return <div>This is RestDetails</div>;
 };
 
-export default RestDetails
+export default RestDetails;

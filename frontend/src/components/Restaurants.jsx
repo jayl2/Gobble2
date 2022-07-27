@@ -11,9 +11,9 @@ const Restaurants = () => {
   useEffect(() => {
     const getRests = async () => {
       const res = await axios
-        .get("http://localhost:3001/restaurants/get")
+        .get("http://localhost:3001/restaurants")
         .then((res) => {
-          console.log(res.data.restaurants);
+          console.log(res);
           setRests(res.data.restaurants);
         });
     };
@@ -21,22 +21,26 @@ const Restaurants = () => {
     getRests();
   }, []);
 
-  return (
-    <div>
-      <div className="restaurants">
-        {rests.map((rest) => (
-          <RestaurantCard
-            key={rest.name}
-            name={rest.name}
-            foodType={rest.foodType}
-            city={rest.city}
-            image={rest.image}
-            desp={rest.description}
-          />
-        ))}
+  if (!rests) {
+    return <h1>Heating things up... Please wait!</h1>;
+  } else {
+    return (
+      <div>
+        <div className="restaurants">
+          {rests.map((rest) => (
+            <RestaurantCard
+              key={rest.name}
+              name={rest.name}
+              foodType={rest.foodType}
+              city={rest.city}
+              image={rest.image}
+              desp={rest.description}
+              onClick={() => navigate(`Restaurant-Details/${rest._id}`)}
+            />
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
-
 export default Restaurants;

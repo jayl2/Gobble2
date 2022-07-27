@@ -7,8 +7,13 @@ import Nav from "./components/Nav";
 import Restaurants from "./components/Restaurants";
 import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
+import RestDetails from "./components/RestDetails";
 
 function App() {
+  let navigate = useNavigate();
+  function navi(to) {
+    navigate(to);
+  }
   return (
     <div className="App">
       <nav>
@@ -21,7 +26,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Restaurants" element={<Restaurants />} />
           <Route path="/Reviews" element={<Reviews />} />
-          {/* <Route path='/Restaurant-Details' element =  */}
+          <Route
+            path="/Restaurant-Details"
+            element={<RestDetails navi={navi} />}
+          />
         </Routes>
       </main>
 

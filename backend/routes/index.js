@@ -4,9 +4,9 @@ const router = Router();
 
 router.get("/", (req, res) => res.send("This is root!"));
 
-router.post("/restaurants/add", controllers.createRestaurant);
+router.post("/restaurants", controllers.createRestaurant);
 
-router.get("/restaurants/get", controllers.getAllRestaurants);
+router.get("/restaurants", controllers.getAllRestaurants);
 
 router.get("/restaurants/:id", controllers.getRestaurantId);
 
