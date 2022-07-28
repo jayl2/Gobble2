@@ -13,7 +13,7 @@ const Nav = () => {
           {" "}
           Restaurants |
         </Link>
-        <Link className="navLinks" to="new">
+        <Link className="navLinks" to="/restaurants/new">
           {" "}
           Add Restaurant
         </Link>

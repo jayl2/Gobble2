@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import DetailsCard from "./DetailsCard";
 import ReviewsCard from "./ReviewsCard";
+import AddRestaurant from "./AddRestaurant";
 
 const RestDetails = (props) => {
   const [details, setDetails] = useState([]);
