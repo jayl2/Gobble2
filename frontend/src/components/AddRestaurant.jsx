@@ -37,6 +37,13 @@ const AddRestaurant = (props) => {
     navigate("/restaurants");
   };
 
+  const realTimeDelRest = async (dog) => {
+    let index = newRest.indexOf(dog);
+    let cat = [...newRest];
+    cat.splice(index, 1);
+    setNewRest(cat);
+  };
+
   return (
     <div>
       <h1>Add a New Restaurant</h1>

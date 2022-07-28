@@ -16,8 +16,8 @@ router.get("/reviews", controllers.getAllReviews);
 
 router.post("/reviews", controllers.createReview);
 
-router.delete("/delete-review/:id", controllers.deleteReview);
+router.delete("/review/:id", controllers.deleteReview);
 
-router.put("/update-restaurants/:id", controllers.updateRestaurant);
+router.put("/review/:id", controllers.updateReview);
 
 module.exports = router;
