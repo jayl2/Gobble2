@@ -35,7 +35,7 @@ const getRestaurantId = async (req, res) => {
     return res.status(500).send(error.message);
   }
 };
-//update not working
+
 const updateRestaurant = async (req, res) => {
   try {
     const updateText = req.body;
@@ -45,6 +45,18 @@ const updateRestaurant = async (req, res) => {
       res.status(500).send("Restaurant not found");
     }
     return res.status(200).json(rest);
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
+
+const deleteRestaurant = async (req, res) => {
+  try {
+    const deleted = await Restaurant.findByIdAndDelete(req.params.id);
+    if (deleted) {
+      return res.send({ msg: `restaurant deleted` });
+    }
+    throw new Error("Restaurant not found");
   } catch (error) {
     return res.status(500).send(error.message);
   }
@@ -92,4 +104,5 @@ module.exports = {
   createReview,
   deleteReview,
   updateRestaurant,
+  deleteRestaurant,
 };

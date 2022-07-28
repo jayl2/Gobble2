@@ -8,7 +8,7 @@ const Restaurant = new Schema(
     city: { type: String, required: true },
     town: { type: String, requred: true },
     description: { type: String, requred: true },
-    image: { type: String, required: true },
+    image: { type: String, required: false },
   },
   { timestamps: true }
 );

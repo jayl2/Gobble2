@@ -9,20 +9,20 @@ const Restaurants = () => {
   //
   let navigate = useNavigate();
 
-  const navigateToShowRest = () => {
-    navigate("/RestDetails");
-  };
+  // const navigateToShowRest = () => {
+  //   navigate("/RestDetails");
+  // };
 
   const showRest = (rest) => {
-    navigate(`{rest.id}`);
+    navigate(`${rest.id}`);
   };
 
   useEffect(() => {
     const getRests = async () => {
       await axios.get("http://localhost:3001/restaurants").then((res) => {
-        console.log(res);
+        // console.log(res);
         setRests(res.data.restaurants);
-        console.log(rests);
+        // console.log(rests);
       });
     };
 
@@ -37,6 +37,7 @@ const Restaurants = () => {
         <div className="restaurants">
           {rests.map((rest) => (
             <RestaurantCard
+              id={rest._id}
               key={rest.name}
               name={rest.name}
               foodType={rest.foodType}
@@ -46,7 +47,7 @@ const Restaurants = () => {
               onClick={() => navigate(`/Reviews/${rest._id}`)}
             />
           ))}
-          <button>
+          <button className="backBtn">
             <Link to="/">Back</Link>
           </button>
         </div>

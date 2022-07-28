@@ -17,6 +17,10 @@ const Nav = () => {
           {" "}
           Add Restaurant
         </Link>
+        <Link className="navLinks" to="/reviews">
+          {" "}
+          | Reviews{" "}
+        </Link>
       </div>
     </nav>
   );

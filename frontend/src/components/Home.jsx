@@ -9,7 +9,7 @@ export default function Home() {
       </div>
       <main>
         <button className="enterBtn">
-          <Link to="/restaurants/new">Enter </Link>
+          <Link to="/restaurants">Enter </Link>
         </button>
       </main>
     </div>

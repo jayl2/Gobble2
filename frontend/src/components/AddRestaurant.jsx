@@ -26,26 +26,23 @@ const AddRestaurant = (props) => {
       town: "",
       description: "",
       image: "",
-    })
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+    });
     console.log(newRest);
   };
 
-  useEffect(() => {
-    addNewRestaurant();
-  });
-
   let navigate = useNavigate();
+
   const handleSubmit = (e) => {
+    props.onSubmit(e);
     navigate("/restaurants");
   };
 
   return (
     <div>
       <h1>Add a New Restaurant</h1>
-      <form className="addRestForm" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <input
+          className="inputForm"
           type="text"
           name="name"
           placeholder="Restaurant Name"
@@ -54,6 +51,7 @@ const AddRestaurant = (props) => {
         />
         <br></br>
         <input
+          className="inputForm"
           type="text"
           name="foodType"
           placeholder="Food Category"
@@ -62,39 +60,50 @@ const AddRestaurant = (props) => {
         />
         <br></br>
         <input
+          className="inputForm"
           type="text"
-          name="name"
-          placeholder="Restaurant Name"
+          name="city"
+          placeholder="City Name"
           onChange={handleNewChange}
           value={newRest.city}
         />
         <br></br>
         <input
+          className="inputForm"
           type="text"
-          name="name"
-          placeholder="Restaurant Name"
+          name="town"
+          placeholder="Town Name"
           onChange={handleNewChange}
           value={newRest.town}
         />
         <br></br>
         <input
+          className="inputForm"
           type="text"
-          name="city"
-          placeholder="City Name"
+          name="description"
+          placeholder="Description"
           onChange={handleNewChange}
           value={newRest.description}
         />
         <br></br>
         <input
+          className="inputForm"
           type="text"
-          name="town"
-          placeholder="Town Name"
+          name="image"
+          placeholder="Image"
           onChange={handleNewChange}
           value={newRest.image}
         />
         <br></br>
         <br></br>
-        <button> Add</button>
+        <button
+          onClick={addNewRestaurant}
+          handleSubmit={handleSubmit}
+          className="addBtn"
+        >
+          {" "}
+          Add
+        </button>
         <br></br>
       </form>
     </div>

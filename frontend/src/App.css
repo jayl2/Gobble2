@@ -81,3 +81,43 @@ p{
   margin-bottom: 40px;
 
 }
+
+.reviewBtn{
+  margin:20px;
+  margin-top: 0px;;
+  padding:.5rem;
+  border-radius: 5%;
+  font-size: 18px;
+  background-color: darkcyan;
+  color: white;
+  font-weight: 600;
+}
+
+.backBtn{
+  margin:20px;
+  padding:10px;
+  width: 60px;
+}
+
+.addBtn{
+  margin:20px;
+  margin-top: 0px;;
+  padding:.5rem;
+  border-radius: 5%;
+  font-size: 18px;
+  background-color: darkcyan;
+  color: white;
+  font-weight: 600;
+  width: 7%;
+}
+
+.inputForm{
+  width: 20%;
+  height:40px;
+  font-size: 16px;
+  margin:1px; ;
+  background-color: azure;
+  
+
+}
+

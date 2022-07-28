@@ -8,6 +8,8 @@ router.post("/restaurants", controllers.createRestaurant);
 
 router.get("/restaurants", controllers.getAllRestaurants);
 
+router.delete("/restaurants/:id", controllers.deleteRestaurant);
+
 router.get("/restaurants/:id", controllers.getRestaurantId);
 
 router.get("/reviews", controllers.getAllReviews);
