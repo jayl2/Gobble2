@@ -19,7 +19,7 @@ export default function RestaurantCard(props) {
       <h2>{props.city}</h2>
       <p>{props.desp}</p>
       <button className="reviewBtn" onClick={props.onClick}>
-        Review
+        Details
       </button>
       <button className="reviewBtn" onClick={() => deleteRest(props.id)}>
         {" "}

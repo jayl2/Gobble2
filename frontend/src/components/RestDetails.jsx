@@ -45,6 +45,7 @@ const RestDetails = (props) => {
           name={details.name}
           image={details.image}
           city={details.city}
+          desp={details.description}
         />
       </div>
       <div></div>

@@ -6,7 +6,10 @@ const Header = () => {
   return (
     <header className="logoHeader">
       <div>
-        <h2 className="gobble">GoBBLE !</h2>
+        <h2 className="gobble">
+          "If you can't feed a hundred people, then feed just one."{" "}
+        </h2>
+        <p className="quoteAuthor">... M. Teresa</p>
       </div>
     </header>
   );

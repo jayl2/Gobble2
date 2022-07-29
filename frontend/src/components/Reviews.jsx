@@ -93,7 +93,7 @@ const Reviews = () => {
           />
           <br></br>
           <label htmlFor="review"></label>
-          <input
+          <textarea
             className="NewRestForm2"
             placeholder="Place your Review"
             type="text"

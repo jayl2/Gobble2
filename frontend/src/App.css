@@ -47,13 +47,26 @@
   
 }
 .gobble{
-  font-size: 8rem;
-  margin: 30px;
+  font-size: 2.5rem;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  width: 30%;
+  text-align: center;
+}
+
+.quoteAuthor{
+  font-size: 2rem;
+  margin: auto;
+  margin-top: 3%;
+  width: 30%;
+  text-align: center;
+  
 }
 
 .enterBtn{
   background-color:rgb(86, 187, 187);
-  font-family: 'Knewave', cursive;
+  /* font-family: 'Knewave', cursive; */
   color: rgb(237, 247, 248);
   border:solid darkcyan;
   border-radius: 5%;
