@@ -69,42 +69,42 @@ const Reviews = () => {
   return (
     <div>
       <div>
-        {/* {" "}
-        This is reviews
-        {reviews.map((review) => (
-          <ReviewsCard
-            key={review._id}
-            restName={review.RestaurantName}
-            name={review.name}
-            review={review.review}
-          />
-        ))} */}
-
         <form onSubmit={handleSubmit}>
-          <label htmlFor="RestaurantName">Restaurant Name</label>
+          <label htmlFor="RestaurantName"></label>
+          <br></br>
           <input
+            className="NewRestForm"
+            placeholder="Retaurant Name"
             type="text"
             id="RestaurantName"
             onChange={handleChange}
             value={formState.subject}
           />
           <br></br>
-          <label htmlFor="name">Your Name</label>
+          <label htmlFor="name"></label>
           <input
+            className="NewRestForm"
+            placeholder="Name"
             type="text"
             id="name"
             onChange={handleChange}
             value={formState.subject}
           />
           <br></br>
-          <label htmlFor="review">Review</label>
+          <label htmlFor="review"></label>
           <input
+            className="NewRestForm2"
+            placeholder="Place your Review"
             type="text"
             id="review"
             onChange={handleChange}
             value={formState.subject}
           />
-          <button type="submit">Submit</button>
+          <br></br>
+          <br></br>
+          <button className="reviewBtn" type="submit">
+            Submit
+          </button>
         </form>
 
         <div>
@@ -115,6 +115,7 @@ const Reviews = () => {
               <p>{review.name}</p>
               <p>{review.review}</p>
               <button
+                className="reviewBtn"
                 onClick={() => {
                   handleDelete(review._id);
                   realTimeDelete(review);
@@ -123,6 +124,7 @@ const Reviews = () => {
                 Delete
               </button>
               <button
+                className="reviewBtn"
                 onClick={() => {
                   handleUpdates(review._id, formState);
                 }}

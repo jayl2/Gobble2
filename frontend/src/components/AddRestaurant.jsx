@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const AddRestaurant = (props) => {
+  //Setting useState
   const [newRest, setNewRest] = useState({
     name: "",
     foodType: "",
@@ -12,7 +13,8 @@ const AddRestaurant = (props) => {
     image: "",
   });
 
-  const handleNewChange = (e) => {
+  //
+  const handleChange = (e) => {
     setNewRest({ ...newRest, [e.target.name]: e.target.value });
   };
 
@@ -37,13 +39,6 @@ const AddRestaurant = (props) => {
     navigate("/restaurants");
   };
 
-  const realTimeDelRest = async (dog) => {
-    let index = newRest.indexOf(dog);
-    let cat = [...newRest];
-    cat.splice(index, 1);
-    setNewRest(cat);
-  };
-
   return (
     <div>
       <h1>Add a New Restaurant</h1>
@@ -53,7 +48,7 @@ const AddRestaurant = (props) => {
           type="text"
           name="name"
           placeholder="Restaurant Name"
-          onChange={handleNewChange}
+          onChange={handleChange}
           value={newRest.name}
         />
         <br></br>
@@ -62,7 +57,7 @@ const AddRestaurant = (props) => {
           type="text"
           name="foodType"
           placeholder="Food Category"
-          onChange={handleNewChange}
+          onChange={handleChange}
           value={newRest.foodType}
         />
         <br></br>
@@ -71,7 +66,7 @@ const AddRestaurant = (props) => {
           type="text"
           name="city"
           placeholder="City Name"
-          onChange={handleNewChange}
+          onChange={handleChange}
           value={newRest.city}
         />
         <br></br>
@@ -80,7 +75,7 @@ const AddRestaurant = (props) => {
           type="text"
           name="town"
           placeholder="Town Name"
-          onChange={handleNewChange}
+          onChange={handleChange}
           value={newRest.town}
         />
         <br></br>
@@ -89,7 +84,7 @@ const AddRestaurant = (props) => {
           type="text"
           name="description"
           placeholder="Description"
-          onChange={handleNewChange}
+          onChange={handleChange}
           value={newRest.description}
         />
         <br></br>
@@ -98,7 +93,7 @@ const AddRestaurant = (props) => {
           type="text"
           name="image"
           placeholder="Image"
-          onChange={handleNewChange}
+          onChange={handleChange}
           value={newRest.image}
         />
         <br></br>
