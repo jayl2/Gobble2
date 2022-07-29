@@ -20,9 +20,7 @@ const Restaurants = () => {
   useEffect(() => {
     const getRests = async () => {
       await axios.get("http://localhost:3001/restaurants").then((res) => {
-        // console.log(res);
         setRests(res.data.restaurants);
-        // console.log(rests);
       });
     };
 
@@ -43,7 +41,6 @@ const Restaurants = () => {
               foodType={rest.foodType}
               city={rest.city}
               image={rest.image}
-              desp={rest.description}
               onClick={() => navigate(`/Reviews/${rest._id}`)}
             />
           ))}
