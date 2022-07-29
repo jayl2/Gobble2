@@ -14,6 +14,7 @@ const Reviews = () => {
   const [formState, setFormState] = useState(initialState);
   const [submitted, setSubmitted] = useState(true);
 
+  //getting reviews
   useEffect(() => {
     const getReviews = async () => {
       try {

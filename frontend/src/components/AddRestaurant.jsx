@@ -18,6 +18,7 @@ const AddRestaurant = (props) => {
     setNewRest({ ...newRest, [e.target.name]: e.target.value });
   };
 
+  //posting new restaurant to
   const addNewRestaurant = async (e) => {
     e.preventDefault();
     await axios.post("http://localhost:3001/restaurants", newRest);
