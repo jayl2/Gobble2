@@ -19,7 +19,9 @@
 - Express
 - MongoDB
 - Mongoose
+---
 
+![Image](https://i.imgur.com/fUIAeeg.png)
 ---
 
 #### **_Getting Started_**
