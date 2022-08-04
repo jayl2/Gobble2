@@ -12,7 +12,6 @@
 
 ### This Project is to mock a restuarant review where customers can leave in comments and review.
 
--
 
 #### **_Technologies Used_**
 
@@ -27,7 +26,7 @@
 
 - Select Restuarant
 - Leave comment or review
-
+- Ability to add a restaurant
 ---
 
 #### **_WireFrame_**
