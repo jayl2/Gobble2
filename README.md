@@ -20,8 +20,11 @@
 - MongoDB
 - Mongoose
 ---
-
+### Wire Frame
 ![Image](https://i.imgur.com/fUIAeeg.png)
+
+### ERD
+![Image](https://i.imgur.com/TLyMCnN.png)
 ---
 
 #### **_Getting Started_**
