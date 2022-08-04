@@ -20,6 +20,13 @@
 - MongoDB
 - Mongoose
 ---
+#### **_Getting Started_**
+
+- Select Restuarant
+- Leave comment or review
+- Ability to add a restaurant
+---
+
 ### Wire Frame
 ![Image](https://i.imgur.com/fUIAeeg.png)
 
@@ -27,12 +34,6 @@
 ![Image](https://i.imgur.com/TLyMCnN.png)
 ---
 
-#### **_Getting Started_**
-
-- Select Restuarant
-- Leave comment or review
-- Ability to add a restaurant
----
 
 #### **_WireFrame_**
 
