@@ -26,7 +26,8 @@
 - Leave comment or review
 - Ability to add a restaurant
 ---
-
+### Snap shot
+![pic](https://i.imgur.com/MAYA0eC.png)
 ### Wire Frame
 ![Image](https://i.imgur.com/fUIAeeg.png)
 
